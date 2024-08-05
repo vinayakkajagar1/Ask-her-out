@@ -1,37 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ask Her Out</title>
-
     <link rel="stylesheet" href="./style.css" />
-  </head>
-  <body>
-    <div class="container">
-      <div
-        class="tenor-gif-embed"
-        data-postid="22885016"
-        data-share-method="host"
-        data-aspect-ratio="1.04918"
-        data-width="100%"
-      >
-        <a href="https://tenor.com/view/manja-gif-22885016">Manja Sticker</a
-        >from
-        <a href="https://tenor.com/search/manja-stickers">Manja Stickers</a>
-      </div>
-      <script
-        type="text/javascript"
-        async
-        src="https://tenor.com/embed.js"
-      ></script>
-      <h1>Will You be my Valentine? 🤗</h1>
-      <p>Lorem ipsum dolor sit amet.</p>
+    <style>
+        /* Basic styling for hidden and active containers */
+        .container {
+            display: none;
+           
+        }
+        .container.active {
+            display: block;
+        }
 
-      <div class="btn">
-        <a href="yes.html">Yes</a>
-        <a href="no1.html">No</a>
-      </div>
+        /* Additional styling for the move-random element */
+        #move-random {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .flex{
+          flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+      
+    </style>
+</head>
+<body>
+    <audio id="background-audio" src="premika-ne-pyar-sepaglasongs_jcQqw2Ev.mp3" loop></audio>
+
+    <!-- Main Content -->
+    <div id="page-index" class="container active fl ">
+      <h1>Hey Vaishnavi</h1>
+      <br>
+      <br>
+        <div  class="tenor-gif-embed" data-postid="22885016" data-share-method="host" data-aspect-ratio="1.04918" data-width="100%">
+            <a  href="https://tenor.com/view/manja-gif-22885016">Manja Sticker</a>
+            from
+            <a href="https://tenor.com/search/manja-stickers">Manja Stickers</a>
+        </div>
+        <br>
+        <br>
+        <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+        <h1>Will You come out with me for a coffee? 🤗</h1>
+        <br>
+        <p>Manjao na</p>
+        <br>
+        <br>
+        <br>
+        <div class="btn" style="margin-left: 150px;">
+            <a href="#" onclick="navigateTo('page-yes')">Yes</a>
+            <a href="#" onclick="navigateTo('page-no1')">No</a>
+        </div>
+        <br>
+        <br>
+        <br>
+        <button id="play-audio-button">Play Audio</button>
     </div>
-  </body>
+
+    <!-- No1 Content -->
+    <div id="page-no1" class="container">
+        <div class="tenor-gif-embed" data-postid="22050818" data-share-method="host" data-aspect-ratio="1" data-width="100%">
+            <a href="https://tenor.com/view/mochi-gif-22050818">Mochi Sticker</a>
+            from
+            <a href="https://tenor.com/search/mochi-stickers">Mochi Stickers</a>
+        </div>
+        <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+        <br>
+        <br>
+        <br>
+        <h1>Soch le ache se! 🙄</h1>
+        <br>
+        <br>
+        <p style="margin-right: 50px;">Ek hi bar tho puch raha hu</p>
+        <br>
+        <br>
+        <div class="btn" style="margin-left: 40px;">
+            <a href="#" onclick="navigateTo('page-yes')">Yes</a>
+            <a href="#" onclick="navigateTo('page-no2')">No</a>
+        </div>
+    </div>
+
+    <!-- No2 Content -->
+    <div id="page-no2" class="container">
+        <div class="tenor-gif-embed" data-postid="15195810" data-share-method="host" data-aspect-ratio="1" data-width="100%">
+            <a href="https://tenor.com/view/couple-forgive-me-asking-for-forgiveness-begging-crying-gif-15195810">Couple Forgive Me Sticker</a>
+            from
+            <a href="https://tenor.com/search/couple-stickers">Couple Stickers</a>
+        </div>
+        <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+        <br>
+        <br>
+        <br>
+        <h1>Ek aur baar Soch le! 😣</h1>
+        <br>
+        <br>
+        <p style="margin-right: 80px;">kyun aisa kar rahi ho😫</p>
+        <br>
+        <br>
+        
+        <div class="btn">
+            <a href="#" onclick="navigateTo('page-yes')">Yes</a>
+            <a href="#" onclick="navigateTo('page-no3')">No</a>
+        </div>
+    </div>
+
+    <!-- No3 Content -->
+    <div id="page-no3" class="container">
+        <div class="tenor-gif-embed" data-postid="15974530976611222074" data-share-method="host" data-aspect-ratio="1.26923" data-width="100%">
+            <a href="https://tenor.com/view/peach-goma-phone-gif-15974530976611222074">Peach Goma Phone Sticker</a>
+            from
+            <a href="https://tenor.com/search/peach+goma-stickers">Peach Goma Stickers</a>
+        </div>
+        <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+        <br>
+        <br>
+        <br>
+        <h1>Manja na! Kitna bhav khaegi 😭</h1>
+        <br>
+        <br>
+        <div class="btn">
+          <a href="#" onclick="navigateTo('page-yes')">Yes</a>
+          <a href="#" id="move-random">No</a>
+        </div>
+    </div>
+
+       <!-- Yes Content -->
+       <div id="page-yes" class="container">
+        <div class="tenor-gif-embed" data-postid="16582959601347529479" data-share-method="host" data-aspect-ratio="1" data-width="100%">
+            <a href="https://tenor.com/view/peach-and-goma-peach-goma-cat-cute-gomu-peachu-goma-and-peach-gif-16582959601347529479">Peach And Goma Peach Goma GIF</a>
+            from
+            <a href="https://tenor.com/search/peach+and+goma-gifs">Peach And Goma GIFs</a>
+        </div>
+        <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+        <h1>Hehehehe, I knew it! 😘</h1>
+    </div>
+
+    <script>
+        // Function to handle navigation between different sections
+        function navigateTo(pageId) {
+            document.querySelectorAll('.container').forEach(el => el.classList.remove('active'));
+            document.getElementById(pageId).classList.add('active');
+        }
+
+        // Audio handling
+        document.addEventListener('DOMContentLoaded', function() {
+            const audio = document.getElementById('background-audio');
+            const playButton = document.getElementById('play-audio-button');
+
+            // Check if audio has been started
+            if (sessionStorage.getItem('audioStarted') === 'true') {
+                audio.play().catch(error => console.log("Playback error:", error));
+                // playButton.style.display = 'none'; // Hide the button if audio is playing
+            }
+
+            playButton.addEventListener('click', function() {
+                audio.play().then(() => {
+                    sessionStorage.setItem('audioStarted', 'true'); // Mark audio as started
+                    playButton.style.display = 'none'; // Hide the button after playing
+                }).catch(error => console.log("Playback error:", error));
+            });
+        });
+
+        // Function to move the random element
+        function moveRandomEl(elm) {
+            elm.style.position = "absolute";
+            elm.style.top = Math.floor(Math.random() * 90 + 5) + "%";
+            elm.style.left = Math.floor(Math.random() * 90 + 5) + "%";
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const moveRandom = document.querySelector("#move-random");
+            if (moveRandom) {
+                moveRandom.addEventListener("mouseenter", function (e) {
+                    moveRandomEl(e.target);
+                });
+            }
+        });
+    </script>
+</body>
 </html>
